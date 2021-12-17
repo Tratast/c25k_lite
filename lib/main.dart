@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider.value(value: Program()),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'C25K Lite',
         theme: ThemeData(
           // This is the theme of your application.
           //
@@ -32,7 +32,11 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const MyHomePage(title: 'C25K Lite'),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const HomeScreen(title: 'C25K Lite'),
+          // '/days': (context) => const ProgramDaysScreen(),
+        },
       )
     );
   }
